@@ -1,0 +1,145 @@
+/* Height Helper */
+
+.h-vh-100 {
+  min-height: 100vh;
+}
+
+.h-vh-75 {
+  min-height: 75vh;
+}
+
+.h-vh-50 {
+  min-height: 50vh;
+}
+
+.h-vh-25 {
+  min-height: 25vh;
+}
+
+.custom-logo-link img {
+  @extend .rounded-circle;
+
+  max-width: 73px;
+  margin-top: 1.5rem;
+
+  @include media-breakpoint-up(sm) {
+    max-width: 114px;
+  }
+
+  @include media-breakpoint-up(md) {
+    max-width: 193px;
+    margin-top: 3rem;
+  }
+}
+
+h1,
+.h1 {
+  font-size: 2.3rem;
+  font-family: $font-family-futura-book;
+  letter-spacing: 0.25em;
+  line-height: 1.2;
+  // text-align: center;
+  // color: #fff;
+  text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 5px;
+  text-transform: uppercase;
+
+  @include media-breakpoint-up(sm) {
+    font-size: 54px;
+  }
+}
+
+h4,
+.h4 {
+  font-family: "futura-lt-w01-light";
+  letter-spacing: 0.2em;
+  font-size: 25px;
+  font-weight: 700;
+  text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 5px;
+  text-transform: uppercase;
+}
+
+.site-header,
+.site-footer {
+  z-index: 5;
+}
+
+.entry-content {
+  .wp-block-cover,
+  .wp-block-nk-awb {
+    &:first-child {
+      overflow: hidden;
+      min-height: 100vh;
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      z-index: 1;
+
+      video {
+        object-fit: cover;
+        width: 100vw !important;
+        height: 100vh !important;
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        margin: 0 !important;
+      }
+
+      & ~ div {
+        position: relative;
+        z-index: 4;
+      }
+    }
+  }
+}
+
+.wp-social-link-mail {
+  display: flex;
+
+  & a::after {
+    content: attr(aria-label);
+    display: inline-flex;
+    height: 24px;
+    margin-left: 10px;
+    margin-top: 12px;
+  }
+}
+
+.wp-block-cover-image .wp-block-cover__inner-container,
+.wp-block-cover .wp-block-cover__inner-container {
+  width: 100%;
+
+  @include media-breakpoint-up(md) {
+    width: calc(100% - 70px);
+  }
+}
+
+ul,
+ol {
+  margin: 0 0 1.5em 0;
+
+  @include media-breakpoint-up(md) {
+    margin: 0 0 1.5em 3em;
+  }
+}
+
+.social-custom {
+  display: none;
+
+  @include media-breakpoint-up(md) {
+    display: block;
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  li {
+    margin: 6px 0;
+  }
+
+  .wp-social-link-mail a::after {
+    display: none;
+  }
+}
