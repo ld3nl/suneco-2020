@@ -124,8 +124,6 @@ ol {
 }
 
 .social-custom {
-  display: none;
-
   @include media-breakpoint-up(md) {
     display: block;
     position: fixed;
@@ -135,8 +133,16 @@ ol {
     flex-direction: column;
   }
 
+  @include media-breakpoint-down(md) {
+    justify-content: center;
+  }
+
   li {
     margin: 6px 0;
+
+    @include media-breakpoint-down(md) {
+      margin: 6px;
+    }
   }
 
   .wp-social-link-mail a::after {

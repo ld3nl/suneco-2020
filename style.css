@@ -4,7 +4,7 @@
  * Author: Denys
  * Author URI: http://underscores.me/
  * Description: Description
- * Version: 1.0.2
+ * Version: 1.0.3
  * GitHub Theme URI: https://github.com/ld3nl/suneco-2020
  * GitHub Branch:    main
  * Tested up to: 5.4
@@ -12039,10 +12039,6 @@ ol {
 	}
 }
 
-.social-custom {
-	display: none;
-}
-
 @media (min-width: 768px) {
 
 	.social-custom {
@@ -12055,8 +12051,22 @@ ol {
 	}
 }
 
+@media (max-width: 991.98px) {
+
+	.social-custom {
+		justify-content: center;
+	}
+}
+
 .social-custom li {
 	margin: 6px 0;
+}
+
+@media (max-width: 991.98px) {
+
+	.social-custom li {
+		margin: 6px;
+	}
 }
 
 .social-custom .wp-social-link-mail a::after {
